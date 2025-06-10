@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Shop E-Bill Generator</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="container" role="main" aria-label="Coffee Shop E-Bill Generator">
+    <h1>E-Bill Generator</h1>
+
+    <section class="items" aria-label="Selectable menu items for billing">
+      <button data-name="Water" data-price="20" type="button" aria-pressed="false">Water - Rs.20</button>
+      <button data-name="Coffee" data-price="50" type="button" aria-pressed="false">Coffee - Rs.50</button>
+      <button data-name="Tea" data-price="30" type="button" aria-pressed="false">Tea - Rs.30</button>
+      <button data-name="Sandwich" data-price="90" type="button" aria-pressed="false">Sandwich - Rs.90</button>
+      <button data-name="Juice" data-price="40" type="button" aria-pressed="false">Juice - Rs.40</button>
+      <button data-name="Fries" data-price="70" type="button" aria-pressed="false">Fries - Rs.70</button>
+      <button data-name="Smoothie" data-price="120" type="button" aria-pressed="false">Smoothie - Rs.120</button>
+      <button data-name="Ice-Cream" data-price="50" type="button" aria-pressed="false">Ice-Cream - Rs.50</button>
+      <button data-name="ThickShake" data-price="140" type="button" aria-pressed="false">ThickShake - Rs.140</button>
+      <button data-name="ButterMilk" data-price="50" type="button" aria-pressed="false">ButterMilk - Rs.50</button>
+      <button data-name="MilkShake" data-price="60" type="button" aria-pressed="false">MilkShake - Rs.60</button>
+      <button data-name="Rolls" data-price="100" type="button" aria-pressed="false">Rolls - Rs.100</button>
+      <button data-name="Noodles" data-price="60" type="button" aria-pressed="false">Noodles - Rs.60</button>
+    </section>
+
+    <section id="bill" aria-label="Bill summary">
+      <h2>Bill Summary</h2>
+      <div id="currentOrderId" style="margin:10px 0; font-weight: bold;">Order ID: </div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="billItems"></tbody>
+      </table>
+      <div id="total" aria-live="polite">Total: Rs.0</div>
+      <button id="clear" type="button" aria-label="Clear the bill and reset all selections">Clear Bill</button>
+      <button id="print" type="button" aria-label="Print the bill">Print Bill</button>
+    </section>
+  </main>
+<script src="index.js"></script>
+</body>
+</html>
